@@ -3,7 +3,7 @@ const search = require('youtube-search');
 const client = new Discord.Client();
 const prefix = "-";
 const token = "Your token goes here!";
-const youtube_api = "AIzaSyAeaSObvHZtNKtTPRudCKHMGATb9qyIN-I";
+const youtube_api = "Your Yt api goes here!";
 const opts = {
     maxResults: 25,
     key: youtube_api,

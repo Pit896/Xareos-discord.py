@@ -8,7 +8,7 @@ const client = new Discord.Client();
 //const prefix = "-"
 //const youtube_api = "AIzaSyAeaSObvHZtNKtTPRudCKHMGATb9qyIN-I"
 //const ownerId = "639851817806725161"
-const clientconfig = commando.CommandoClient({
+const clientconfig = new commando.CommandoClient({
     owner: process.env.ownerId,
     prefix: process.env.prefix,
     youtube_api: process.env.youtube_api

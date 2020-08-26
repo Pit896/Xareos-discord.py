@@ -1,0 +1,29 @@
+{
+  "name": "commandojs",
+  "version": "1.0.0",
+  "description": "Work in progress! \"# Youtube-Bot\"",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node main.js"
+  },
+  "author": "Pit.js",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.3.1",
+    "discord.js-commando": "^0.10.0",
+    "node-opus": "^0.3.3",
+    "youtube-search": "^1.1.4",
+    "ytdl-core": "^3.2.2"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pit869/Youtube-Bot.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/Pit869/Youtube-Bot/issues"
+  },
+  "homepage": "https://github.com/Pit869/Youtube-Bot#readme"
+}

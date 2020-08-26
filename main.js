@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const search = require('youtube-search');
 const client = new Discord.Client();
 const prefix = "-";
-const token = "NzQ3NDM2ODU4NDA0NzY1ODI4.X0O20Q.4alSuF1w9D-rZjM02zKeKdmd5-A";
+const token = "Your token goes here!";
 const youtube_api = "AIzaSyAeaSObvHZtNKtTPRudCKHMGATb9qyIN-I";
 const opts = {
     maxResults: 25,

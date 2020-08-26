@@ -10,12 +10,11 @@ const client = new Discord.Client();
 //const ownerId = "639851817806725161"
 const clientconfig = new commando.CommandoClient({
     owner: process.env.ownerId,
-    prefix: process.env.prefix,
-    youtube_api: process.env.youtube_api
+    prefix: process.env.prefix
 });
 const opts = {
     maxResults: 25,
-    key: youtube_api,
+    key: process.env.youtube_api,
     type: 'video'
 };
 

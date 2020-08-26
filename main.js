@@ -11,7 +11,6 @@ const client = new Discord.Client();
 const clientconfig = new commando.CommandoClient({
     owner: process.env.ownerId,
     prefix: process.env.prefix,
-    token: process.env.token
 });
 const opts = {
     maxResults: 25,
@@ -80,4 +79,4 @@ client.on('message', async message =>{
     }
 });
 
-client.login(token)
+client.login(process.env.token)

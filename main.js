@@ -1,12 +1,11 @@
 const Discord = require('discord.js');
+const path = require('path');
 const search = require('youtube-search');
 const client = new Discord.Client();
-const prefix = "-";
-const token = "Your token goes here!";
-const youtube_api = "Your Yt api goes here!";
+const config = require(path.join(__dirname, 'config', 'config.json'));
 const opts = {
     maxResults: 25,
-    key: youtube_api,
+    key: config.youtube_api,
     type: 'video'
 };
 
@@ -25,14 +24,14 @@ for(const file of commandFiles){
 client.once('ready', () => {
     client.user.setStatus('idle')
     client.user.setActivity('-search, command new!')
-    console.log("Groories is now online!");
+    console.log("Youtuber bot is now online!");
 });
 
 client.on('message', async message =>{
     if(message.author.bot) return;
-    if(!message.content.startsWith(prefix) || message.author.bot) return;
+    if(!message.content.startsWith(config.prefix) || message.author.bot) return;
 
-    const args = message.content.slice(prefix.length).split(/ +/);
+    const args = message.content.slice(config.prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
 
     if(command === 'ping'){
@@ -57,7 +56,6 @@ client.on('message', async message =>{
                 i++;
                 return i + ") " + result.title;
             });
-            console.log(titles);
             message.channel.send({
                 embed: {
                     title: 'Your results!',
@@ -68,18 +66,8 @@ client.on('message', async message =>{
 
             filter = m => (m.author.id === message.author.id) && m.content >= 1 && m.content <= youtubeResults.length;
             let collected = await message.channel.awaitMessages(filter, { maxMathces: 1 });
-            let selected = youtubeResults[collected.first().content - 1];
-
-            let embed = new Discord.MessageEmbed()
-                .setColor("#94fc03")
-                .setTitle(`🛡Title: \n${selected.title}`)
-                .setURL(`🎟Video link: \n${selected.link}`)
-                .setDescription(`💬Description: \n${selected.description}`)
-                .setThumbnail(`${selected.thumbnails.default.url}`);
-
-            let Embed2 = await message.channel.awaitMessages(embed);
         }
     }
 });
 
-client.login(token)
+client.login(config.token)

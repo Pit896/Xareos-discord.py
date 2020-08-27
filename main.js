@@ -2,14 +2,10 @@ const Discord = require('discord.js');
 const path = require('path');
 const search = require('youtube-search');
 const client = new Discord.Client();
-const token = "NzQ3NDM2ODU4NDA0NzY1ODI4.X0O20Q.BmBdqBkGuB6DTjKzfel0Or0bYxk"
-//const config = require(path.join(__dirname, 'config', 'config.json'));
-const prefix = "-"
-const youtube_api = "AIzaSyAeaSObvHZtNKtTPRudCKHMGATb9qyIN-I"
-const ownerId = "639851817806725161"
+const config = require(path.join(__dirname, 'config', 'config.json'));
 const opts = {
     maxResults: 25,
-    key: youtube_api,
+    key: config.youtube_api,
     type: 'video'
 };
 
@@ -33,9 +29,9 @@ client.once('ready', () => {
 
 client.on('message', async message =>{
     if(message.author.bot) return;
-    if(!message.content.startsWith(prefix) || message.author.bot) return;
+    if(!message.content.startsWith(config.prefix) || message.author.bot) return;
 
-    const args = message.content.slice(prefix.length).split(/ +/);
+    const args = message.content.slice(config.prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
 
     if(command === 'ping'){
@@ -74,4 +70,4 @@ client.on('message', async message =>{
     }
 });
 
-client.login(token)
+client.login(config.token)

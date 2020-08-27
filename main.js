@@ -1,19 +1,15 @@
 const Discord = require('discord.js');
-const commando = require('discord.js-commando')
 const path = require('path');
 const search = require('youtube-search');
 const client = new Discord.Client();
-//const token = "NzQ3NDM2ODU4NDA0NzY1ODI4.X0O20Q.9G9ER-tHRAfWjliY8CyM2-It-ss"
+const token = "NzQ3NDM2ODU4NDA0NzY1ODI4.X0O20Q.BmBdqBkGuB6DTjKzfel0Or0bYxk"
 //const config = require(path.join(__dirname, 'config', 'config.json'));
 const prefix = "-"
-//const youtube_api = "AIzaSyAeaSObvHZtNKtTPRudCKHMGATb9qyIN-I"
-//const ownerId = "639851817806725161"
-const clientconfig = new commando.CommandoClient({
-    owner: process.env.ownerId
-});
+const youtube_api = "AIzaSyAeaSObvHZtNKtTPRudCKHMGATb9qyIN-I"
+const ownerId = "639851817806725161"
 const opts = {
     maxResults: 25,
-    key: process.env.youtube_api,
+    key: youtube_api,
     type: 'video'
 };
 
@@ -78,4 +74,4 @@ client.on('message', async message =>{
     }
 });
 
-client.login(process.env.TOKEN)
+client.login(token)

@@ -5,12 +5,11 @@ const search = require('youtube-search');
 const client = new Discord.Client();
 //const token = "NzQ3NDM2ODU4NDA0NzY1ODI4.X0O20Q.9G9ER-tHRAfWjliY8CyM2-It-ss"
 //const config = require(path.join(__dirname, 'config', 'config.json'));
-//const prefix = "-"
+const prefix = "-"
 //const youtube_api = "AIzaSyAeaSObvHZtNKtTPRudCKHMGATb9qyIN-I"
 //const ownerId = "639851817806725161"
 const clientconfig = new commando.CommandoClient({
-    owner: process.env.ownerId,
-    prefix: process.env.prefix,
+    owner: process.env.ownerId
 });
 const opts = {
     maxResults: 25,

@@ -1,1 +1,1 @@
-worker: start.bat
+worker: python bot.py

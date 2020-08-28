@@ -15,7 +15,7 @@ TOKEN = secret_file['token']
 
 bot.remove_command('help') 
 
-for cog in os.listdir(".\\cogs"):
+for cog in os.listdir("cogs"):
     if cog.endswith(".py"):
         try:
             cog = f"cogs.{cog.replace('.py', '')}"

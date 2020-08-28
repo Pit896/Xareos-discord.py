@@ -213,7 +213,6 @@ playsound==1.2.2
 pluggy==0.13.1
 ply==3.11
 pokedex.py==1.1.2
-post==2019.4.13
 praw==7.0.0
 prawcore==1.4.0
 prettytable==0.7.2

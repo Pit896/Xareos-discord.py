@@ -4,3 +4,4 @@ DateTime==4.3
 discord.py==1.4.1
 hypixel==0.7.9
 requests==2.24.0
+praw==7.0.0

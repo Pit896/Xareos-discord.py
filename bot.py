@@ -1,6 +1,12 @@
 import discord
 from discord.ext import commands
 import json, os
+from pathlib import Path
+
+
+cwd = Path(__file__).parents[0]
+cwd = str(cwd)
+print(f"{cwd}\n------")
 
 command_prefix = ['X ']
 secret_file = json.load(open(cwd+"/bot_config/secrets.json"))

@@ -321,7 +321,6 @@ tempora==1.14.1
 tensorboard==2.2.2
 tensorboard-plugin-wit==1.7.0
 tensorflow==2.2.0
-tensorflow-estimator==2.2.0
 termcolor==1.1.0
 termcolor2==0.0.3
 terminado==0.8.3
@@ -350,7 +349,6 @@ urbandictionary==1.1
 uritemplate==3.0.1
 urllib3==1.25.9
 utils==1.0.1
-videomass==2.8.8
 vine==1.3.0
 virtualenv==20.0.25
 virtualenv-clone==0.5.4

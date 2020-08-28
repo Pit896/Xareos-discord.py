@@ -4,6 +4,5 @@ discord.py==1.4.1
 hypixel==0.7.9
 praw==7.0.0
 prawcore==1.4.0
-request==2019.4.13
 requests==2.24.0
 

@@ -365,12 +365,3 @@ win-unicode-console==0.5
 win32-setctime==1.0.1
 wrapt==1.10.11
 WTForms==2.3.1
-yappi==1.2.5
-youtube-dl-gui==1.0.4
-youtube-dl-server==0.3
-youtube-streamer==1.0.1
-youtube-watcher==0.10.5
-yql==1.0.1
-zipp==3.1.0
-zope.event==4.4
-zope.interface==5.1.0

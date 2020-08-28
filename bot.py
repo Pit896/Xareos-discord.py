@@ -1,6 +1,5 @@
 import discord
 from discord.ext import commands
-from pathlib import Path
 import json, os
 
 command_prefix = ['X ']
